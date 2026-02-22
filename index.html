@@ -20,102 +20,174 @@ fbq('track', 'PageView');
 </script>
 
 <style>
-body{
-margin:0;
-font-family:Arial, sans-serif;
-background:#fff;
-color:#333;
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.topo{
-background:#1fa347;
-color:#fff;
-padding:15px;
-text-align:center;
-font-weight:bold;
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-.container{
-padding:20px;
-max-width:600px;
-margin:auto;
+/* Topo com destaque */
+.topo {
+  background: #1fa347;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
 }
 
-h1{
-font-size:26px;
-color:#1fa347;
+/* Container central */
+.container {
+  max-width: 650px;
+  margin: auto;
+  padding: 20px;
 }
 
-.sub{
-font-size:18px;
-margin-bottom:20px;
+/* Títulos */
+h1, h2 {
+  color: #1fa347;
+  margin-bottom: 15px;
 }
 
-img{
-max-width:100%;
-border-radius:10px;
-margin-top:15px;
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.cta{
-display:block;
-background:#1fa347;
-color:white;
-text-align:center;
-padding:15px;
-margin:20px 0;
-font-size:18px;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
+h2 {
+  font-size: 22px;
+  margin-top: 40px;
 }
 
-.section{
-margin-top:40px;
+/* Subtítulos e textos */
+.sub {
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.box{
-background:#f5f5f5;
-padding:15px;
-border-radius:10px;
-margin-top:15px;
+p {
+  margin-bottom: 12px;
 }
 
-.price-box{
-background:#fff5f5;
-padding:20px;
-border-radius:12px;
-text-align:center;
-margin-top:25px;
-border:2px solid #1fa347;
+/* Imagens responsivas */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+  display: block;
 }
 
-.old-price{
-text-decoration:line-through;
-color:#999;
-font-size:18px;
+/* Botões principais */
+.cta {
+  display: block;
+  background: #1fa347;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  margin: 20px 0;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
-.new-price{
-color:#1fa347;
-font-size:28px;
-font-weight:bold;
-margin-top:10px;
+.cta:hover {
+  background-color: #15963a;
+  transform: scale(1.03);
 }
 
-.depo{
-background:#f9f9f9;
-padding:15px;
-border-radius:10px;
-margin-top:15px;
-font-style:italic;
+/* Seções e caixas */
+.section {
+  margin-top: 40px;
 }
 
-.footer{
-margin-top:40px;
-text-align:center;
-font-size:14px;
-color:#777;
+.box, .depo {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+.depo {
+  font-style: italic;
+}
+
+/* Bloco de preço */
+.price-box {
+  background: #fff5f5;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 25px 0;
+  border: 2px solid #1fa347;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 18px;
+}
+
+.new-price {
+  color: #1fa347;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Footer */
+.footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+/* WhatsApp flutuante */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: white;
+  padding: 14px 18px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+  transform: scale(1.05);
+}
+
+/* Mobile adjustments */
+@media(max-width:480px){
+  h1 {
+    font-size: 24px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .cta {
+    font-size: 16px;
+    padding: 14px;
+  }
 }
 </style>
 </head>
@@ -128,20 +200,16 @@ color:#777;
 
 <div class="container">
 
-<h1>
-ALISE SEU CABELO SEM FORMOL E TENHA RESULTADO DE SALÃO NA PRIMEIRA APLICAÇÃO
-</h1>
+<h1>ALISE SEU CABELO SEM FORMOL E TENHA RESULTADO DE SALÃO NA PRIMEIRA APLICAÇÃO</h1>
 
-<p class="sub">
-Reduza volume, elimine frizz e conquiste brilho intenso com fórmula vegetal segura.
-</p>
+<p class="sub">Reduza volume, elimine frizz e conquiste brilho intenso com fórmula vegetal segura.</p>
 
-<img src="IMG_20260214_171013_230.webp" alt="Produto">
+<img src="IMG_20260214_171013_230.webp" alt="Progressiva Vegetal">
 
 <!-- BLOCO DE OFERTA -->
 <div class="price-box">
 <p class="old-price">De R$197</p>
-<p class="new-price">Por apenas 150 BRL</p>
+<p class="new-price">Por apenas R$150</p>
 <p>🔥 Promoção por tempo limitado</p>
 <p>✔ Pagamento somente na entrega</p>
 </div>
@@ -150,57 +218,48 @@ Reduza volume, elimine frizz e conquiste brilho intenso com fórmula vegetal seg
 QUERO RECEBER E PAGAR NA ENTREGA
 </a>
 
+<!-- Resultados -->
 <div class="section">
 <h2>🔥 RESULTADOS REAIS</h2>
-
-<img src="antes-depois-1.jpg">
-<img src="antes-depois-2.jpg">
-<img src="antes-depois-3.jpg">
-
+<img src="antes-depois-1.jpg" alt="Antes e Depois">
+<img src="antes-depois-2.jpg" alt="Antes e Depois">
+<img src="antes-depois-3.jpg" alt="Antes e Depois">
 <p>Resultados já na primeira aplicação.</p>
 </div>
 
+<!-- Depoimentos -->
 <div class="section">
 <h2>💬 O que estão dizendo:</h2>
-
-<div class="depo">
-"Meu cabelo era super armado, usei e ficou alinhado na primeira aplicação. Amei!" – Juliana M.
+<div class="depo">"Meu cabelo era super armado, usei e ficou alinhado na primeira aplicação. Amei!" – Juliana M.</div>
+<div class="depo">"Economizei dinheiro de salão e o resultado ficou perfeito." – Camila R.</div>
+<div class="depo">"Sem cheiro forte e sem formol. Recomendo muito!" – Patrícia S.</div>
 </div>
 
-<div class="depo">
-"Economizei dinheiro de salão e o resultado ficou perfeito." – Camila R.
-</div>
-
-<div class="depo">
-"Sem cheiro forte e sem formol. Recomendo muito!" – Patrícia S.
-</div>
-
-</div>
-
+<!-- Benefícios -->
 <div class="section">
 <h2>💎 Por que escolher essa progressiva?</h2>
-
 <div class="box">
-✔ Fórmula vegetal  
-✔ Sem formol  
-✔ Reduz volume  
-✔ Elimina frizz  
-✔ Brilho intenso  
-✔ Fácil aplicação  
+✔ Fórmula vegetal<br>
+✔ Sem formol<br>
+✔ Reduz volume<br>
+✔ Elimina frizz<br>
+✔ Brilho intenso<br>
+✔ Fácil aplicação
 </div>
 </div>
 
+<!-- Compra segura -->
 <div class="section">
 <h2>🔒 Compra 100% Segura</h2>
-
 <div class="box">
-✔ Você só paga quando receber  
-✔ Produto testado  
-✔ Aprovado pela Anvisa  
-✔ Entrega rápida  
+✔ Você só paga quando receber<br>
+✔ Produto testado<br>
+✔ Aprovado pela Anvisa<br>
+✔ Entrega rápida
 </div>
 </div>
 
+<!-- Estoque limitado -->
 <div class="section">
 <h2>⏳ Estoque Promocional Limitado</h2>
 <p>Estamos liberando poucas unidades com pagamento na entrega.</p>
@@ -213,37 +272,13 @@ GARANTIR MEU LISO AGORA
 <div class="footer">
 Produto sem formol • Seguro • Pagamento somente na entrega
 </div>
-
 </div>
 
-<!-- BOTÃO WHATSAPP FLUTUANTE -->
+<!-- WhatsApp flutuante -->
 <a href="https://wa.me/5585996676706?text=Olá!%20Tenho%20interesse%20na%20Progressiva%20Vegetal.%20Pode%20me%20ajudar?" 
 class="whatsapp-float" target="_blank">
 💬 Fale Conosco
 </a>
-
-<style>
-.whatsapp-float {
-position: fixed;
-bottom: 20px;
-right: 20px;
-background-color: #25D366;
-color: white;
-padding: 14px 18px;
-border-radius: 50px;
-font-size: 16px;
-font-weight: bold;
-text-decoration: none;
-box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-z-index: 999;
-transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-background-color: #1ebe5d;
-transform: scale(1.05);
-}
-</style>
 
 </body>
 </html>
